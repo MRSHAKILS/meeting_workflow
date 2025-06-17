@@ -21,28 +21,39 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="/add-meeting/">Add Meeting</a></li>    
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#about">About Us</a></li>          
                 <li><a href="/login/" class="btn-login"> Login/Signup </a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Home Section -->
-    <!-- Improved Hero Section -->
-<section class="home" id="home">
+  <section class="home" id="home">
     <div class="container">
-        <h1 class="main-heading">Your AI-Powered Meeting Assistant ✨</h1>
+        <h1 class="main-heading">We are, your AI-Powered Meeting Assistant✨</h1>
         <p class="subtitle">Join, Transcribe & Summarize Meetings Automatically — Save Time and Stay Organized.</p>
         <div class="cta-buttons">
             <a href="/login/" class="btn-primary">Get Started</a>
             <a href="#features" class="btn-secondary">Learn More</a>
         </div>
         <div class="hero-image">
-            <img src="{% static 'images/first_animation2.gif' %}" 
-                 alt="AI Meeting Assistant in action" 
-                 loading="lazy">
+            <img src="{% static 'images/first_animation2.gif' %}" alt="AI Meeting Assistant">
+        </div>
+    </div>
+</section>
+
+<!-- Add meeting section -->
+<section class="add-meeting" id="add-meeting">
+    <div class="container">
+        <h2 class="section-title">Add New Meeting</h2>
+        <div class="add-meeting-box">
+            <a href="/create-meeting/" class="add-meeting-btn">
+                <i class="fas fa-plus"></i>
+                <span>Create New Meeting</span>
+            </a>
         </div>
     </div>
 </section>
