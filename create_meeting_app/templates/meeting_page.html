@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Meeting: {{ meeting.name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="header">
+    <h1>{{ meeting.name }}</h1>
+  </div>
+  <div class="meeting-box">
+    <p><strong>Bot:</strong> {{ meeting.bot_name }}</p>
+    <p><strong>Link:</strong> <a href="{{ meeting.meeting_link }}" target="_blank">{{ meeting.meeting_link }}</a></p>
+    <p><strong>Join Time:</strong> {{ meeting.join_time }}</p>
+  </div>
+</div>
+{% endblock %}
