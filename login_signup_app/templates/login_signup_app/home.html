@@ -1,0 +1,22 @@
+{% extends "login_signup_app/base.html" %}
+{% load static %}
+
+{% load socialaccount %}
+{% block title %}Sign In{% endblock %}
+
+{% block content %}
+<div class="center-screen">
+  <div class="card-container">
+    <h1>Welcome</h1>
+    <p>Please sign in or create an account:</p>
+    <a href="{% url 'account_login' %}" class="btn btn-primary">Login with Email</a>
+    <a href="{% url 'account_signup' %}" class="btn btn-outline">Sign Up with Email</a>
+
+    <div class="divider"><span>OR</span></div>
+
+    <a href="{% provider_login_url 'google' %}" class="btn btn-outline">
+      Continue with Google
+    </a>
+  </div>
+</div>
+{% endblock %}

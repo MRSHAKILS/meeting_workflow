@@ -1,0 +1,21 @@
+{% extends "login_signup_app/base.html" %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <form method="post" action="{% url 'account_signup' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Create Account</button>
+    </form>
+    <p>Already have an account? <a href="{% url 'account_login' %}">Login</a></p>
+    <div class="divider"><span>OR</span></div>
+    <a href="{% provider_login_url 'google' method='oauth2' %}" class="btn btn-outline btn-google">
+      <img src="https://developers.google.com/identity/images/g-logo.png" class="icon"> Sign up with Google
+    </a>
+  </div>
+{% endblock %}

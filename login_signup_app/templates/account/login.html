@@ -1,0 +1,20 @@
+{% extends "login_signup_app/base.html" %}
+{% load static %}
+{% load socialaccount %}    {# needed for provider_login_url #}
+
+{% block title %}Email Login{% endblock %}
+
+{% block content %}
+  <div class="your-login-container">
+    <form method="post" action="{% url 'account_login' %}">
+      {% csrf_token %}
+     {{ form.as_p }}
+
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <div class="divider"><span>OR</span></div>
+    <a href="{% provider_login_url 'google' %}" class="btn btn-outline">
+      Continue with Google
+    </a>
+  </div>
+{% endblock %}

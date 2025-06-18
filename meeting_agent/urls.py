@@ -19,5 +19,13 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # Allauth’s built‑in routes:
+    path('accounts/', include('allauth.urls')),
+
+    # Your custom login/signup app
+    path('login/', include('login_signup_app.urls')),
+
+    # Meetings dashboard (requires login)
      path('dashboard/', include('create_meeting_app.urls')),
 ]
