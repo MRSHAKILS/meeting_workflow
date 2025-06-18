@@ -1,0 +1,392 @@
+System check identified some issues:
+
+WARNINGS:
+?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}
+?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+⌚ Checking meetings between 13:59:00 and 14:05:00
+🤖 Joining meeting: ahad as bot 'mmaaa'
+❌ Failed to join: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5647c028045a <unknown>
+#1 0x5647bfd25760 <unknown>
+#2 0x5647bfd600d8 <unknown>
+#3 0x5647bfd5b2cf <unknown>
+#4 0x5647bfdab8d6 <unknown>
+#5 0x5647bfdaaf96 <unknown>
+#6 0x5647bfd9cc23 <unknown>
+#7 0x5647bfd694a5 <unknown>
+#8 0x5647bfd6a111 <unknown>
+#9 0x5647c0244f1b <unknown>
+#10 0x5647c0248e19 <unknown>
+#11 0x5647c022bac9 <unknown>
+#12 0x5647c02499c8 <unknown>
+#13 0x5647c021034f <unknown>
+#14 0x5647c026da28 <unknown>
+#15 0x5647c026dc06 <unknown>
+#16 0x5647c027f336 <unknown>
+#17 0x7f32c2b6f7eb <unknown>
+#18 0x7f32c2bf318c <unknown>
+System check identified some issues:
+
+WARNINGS:
+?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}
+?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+⌚ Checking meetings between 14:00:00 and 14:06:00
+🤖 Joining meeting: ahad as bot 'mmaaa'
+Navigating to https://meet.google.com/nmz-ifmm-qce
+Bot error: Message: 
+Stacktrace:
+#0 0x55ff5f71545a <unknown>
+#1 0x55ff5f1ba760 <unknown>
+#2 0x55ff5f20c127 <unknown>
+#3 0x55ff5f20c321 <unknown>
+#4 0x55ff5f25ae94 <unknown>
+#5 0x55ff5f231e7d <unknown>
+#6 0x55ff5f25830b <unknown>
+#7 0x55ff5f231c23 <unknown>
+#8 0x55ff5f1fe4a5 <unknown>
+#9 0x55ff5f1ff111 <unknown>
+#10 0x55ff5f6d9f1b <unknown>
+#11 0x55ff5f6dde19 <unknown>
+#12 0x55ff5f6c0ac9 <unknown>
+#13 0x55ff5f6de9c8 <unknown>
+#14 0x55ff5f6a534f <unknown>
+#15 0x55ff5f702a28 <unknown>
+#16 0x55ff5f702c06 <unknown>
+#17 0x55ff5f714336 <unknown>
+#18 0x7f93e50cd7eb <unknown>
+#19 0x7f93e515118c <unknown>
+
+❌ Failed to join: Message: 
+Stacktrace:
+#0 0x55ff5f71545a <unknown>
+#1 0x55ff5f1ba760 <unknown>
+#2 0x55ff5f20c127 <unknown>
+#3 0x55ff5f20c321 <unknown>
+#4 0x55ff5f25ae94 <unknown>
+#5 0x55ff5f231e7d <unknown>
+#6 0x55ff5f25830b <unknown>
+#7 0x55ff5f231c23 <unknown>
+#8 0x55ff5f1fe4a5 <unknown>
+#9 0x55ff5f1ff111 <unknown>
+#10 0x55ff5f6d9f1b <unknown>
+#11 0x55ff5f6dde19 <unknown>
+#12 0x55ff5f6c0ac9 <unknown>
+#13 0x55ff5f6de9c8 <unknown>
+#14 0x55ff5f6a534f <unknown>
+#15 0x55ff5f702a28 <unknown>
+#16 0x55ff5f702c06 <unknown>
+#17 0x55ff5f714336 <unknown>
+#18 0x7f93e50cd7eb <unknown>
+#19 0x7f93e515118c <unknown>
+System check identified some issues:
+
+WARNINGS:
+?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}
+?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+⌚ Checking meetings between 14:01:00 and 14:07:00
+🤖 Joining meeting: ahad as bot 'mmaaa'
+Navigating to https://meet.google.com/nmz-ifmm-qce
+Bot error: Message: 
+Stacktrace:
+#0 0x5604723a945a <unknown>
+#1 0x560471e4e760 <unknown>
+#2 0x560471ea0127 <unknown>
+#3 0x560471ea0321 <unknown>
+#4 0x560471eeee94 <unknown>
+#5 0x560471ec5e7d <unknown>
+#6 0x560471eec30b <unknown>
+#7 0x560471ec5c23 <unknown>
+#8 0x560471e924a5 <unknown>
+#9 0x560471e93111 <unknown>
+#10 0x56047236df1b <unknown>
+#11 0x560472371e19 <unknown>
+#12 0x560472354ac9 <unknown>
+#13 0x5604723729c8 <unknown>
+#14 0x56047233934f <unknown>
+#15 0x560472396a28 <unknown>
+#16 0x560472396c06 <unknown>
+#17 0x5604723a8336 <unknown>
+#18 0x7f64bb7087eb <unknown>
+#19 0x7f64bb78c18c <unknown>
+
+❌ Failed to join: Message: 
+Stacktrace:
+#0 0x5604723a945a <unknown>
+#1 0x560471e4e760 <unknown>
+#2 0x560471ea0127 <unknown>
+#3 0x560471ea0321 <unknown>
+#4 0x560471eeee94 <unknown>
+#5 0x560471ec5e7d <unknown>
+#6 0x560471eec30b <unknown>
+#7 0x560471ec5c23 <unknown>
+#8 0x560471e924a5 <unknown>
+#9 0x560471e93111 <unknown>
+#10 0x56047236df1b <unknown>
+#11 0x560472371e19 <unknown>
+#12 0x560472354ac9 <unknown>
+#13 0x5604723729c8 <unknown>
+#14 0x56047233934f <unknown>
+#15 0x560472396a28 <unknown>
+#16 0x560472396c06 <unknown>
+#17 0x5604723a8336 <unknown>
+#18 0x7f64bb7087eb <unknown>
+#19 0x7f64bb78c18c <unknown>
+🤖 Joining meeting: sakk as bot 'micro'
+Navigating to https://meet.google.com/nmz-ifmm-qce
+Bot error: Message: 
+Stacktrace:
+#0 0x5628c76e045a <unknown>
+#1 0x5628c7185760 <unknown>
+#2 0x5628c71d7127 <unknown>
+#3 0x5628c71d7321 <unknown>
+#4 0x5628c7225e94 <unknown>
+#5 0x5628c71fce7d <unknown>
+#6 0x5628c722330b <unknown>
+#7 0x5628c71fcc23 <unknown>
+#8 0x5628c71c94a5 <unknown>
+#9 0x5628c71ca111 <unknown>
+#10 0x5628c76a4f1b <unknown>
+#11 0x5628c76a8e19 <unknown>
+#12 0x5628c768bac9 <unknown>
+#13 0x5628c76a99c8 <unknown>
+#14 0x5628c767034f <unknown>
+#15 0x5628c76cda28 <unknown>
+#16 0x5628c76cdc06 <unknown>
+#17 0x5628c76df336 <unknown>
+#18 0x7f2bbf2fa7eb <unknown>
+#19 0x7f2bbf37e18c <unknown>
+
+❌ Failed to join: Message: 
+Stacktrace:
+#0 0x5628c76e045a <unknown>
+#1 0x5628c7185760 <unknown>
+#2 0x5628c71d7127 <unknown>
+#3 0x5628c71d7321 <unknown>
+#4 0x5628c7225e94 <unknown>
+#5 0x5628c71fce7d <unknown>
+#6 0x5628c722330b <unknown>
+#7 0x5628c71fcc23 <unknown>
+#8 0x5628c71c94a5 <unknown>
+#9 0x5628c71ca111 <unknown>
+#10 0x5628c76a4f1b <unknown>
+#11 0x5628c76a8e19 <unknown>
+#12 0x5628c768bac9 <unknown>
+#13 0x5628c76a99c8 <unknown>
+#14 0x5628c767034f <unknown>
+#15 0x5628c76cda28 <unknown>
+#16 0x5628c76cdc06 <unknown>
+#17 0x5628c76df336 <unknown>
+#18 0x7f2bbf2fa7eb <unknown>
+#19 0x7f2bbf37e18c <unknown>
+System check identified some issues:
+
+WARNINGS:
+?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}
+?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+⌚ Checking meetings between 14:02:00 and 14:08:00
+🤖 Joining meeting: ahad as bot 'mmaaa'
+Navigating to https://meet.google.com/nmz-ifmm-qce
+Bot error: Message: 
+Stacktrace:
+#0 0x55e3fd21f45a <unknown>
+#1 0x55e3fccc4760 <unknown>
+#2 0x55e3fcd16127 <unknown>
+#3 0x55e3fcd16321 <unknown>
+#4 0x55e3fcd64e94 <unknown>
+#5 0x55e3fcd3be7d <unknown>
+#6 0x55e3fcd6230b <unknown>
+#7 0x55e3fcd3bc23 <unknown>
+#8 0x55e3fcd084a5 <unknown>
+#9 0x55e3fcd09111 <unknown>
+#10 0x55e3fd1e3f1b <unknown>
+#11 0x55e3fd1e7e19 <unknown>
+#12 0x55e3fd1caac9 <unknown>
+#13 0x55e3fd1e89c8 <unknown>
+#14 0x55e3fd1af34f <unknown>
+#15 0x55e3fd20ca28 <unknown>
+#16 0x55e3fd20cc06 <unknown>
+#17 0x55e3fd21e336 <unknown>
+#18 0x7f9ecb7377eb <unknown>
+#19 0x7f9ecb7bb18c <unknown>
+
+❌ Failed to join: Message: 
+Stacktrace:
+#0 0x55e3fd21f45a <unknown>
+#1 0x55e3fccc4760 <unknown>
+#2 0x55e3fcd16127 <unknown>
+#3 0x55e3fcd16321 <unknown>
+#4 0x55e3fcd64e94 <unknown>
+#5 0x55e3fcd3be7d <unknown>
+#6 0x55e3fcd6230b <unknown>
+#7 0x55e3fcd3bc23 <unknown>
+#8 0x55e3fcd084a5 <unknown>
+#9 0x55e3fcd09111 <unknown>
+#10 0x55e3fd1e3f1b <unknown>
+#11 0x55e3fd1e7e19 <unknown>
+#12 0x55e3fd1caac9 <unknown>
+#13 0x55e3fd1e89c8 <unknown>
+#14 0x55e3fd1af34f <unknown>
+#15 0x55e3fd20ca28 <unknown>
+#16 0x55e3fd20cc06 <unknown>
+#17 0x55e3fd21e336 <unknown>
+#18 0x7f9ecb7377eb <unknown>
+#19 0x7f9ecb7bb18c <unknown>
+🤖 Joining meeting: sakk as bot 'micro'
+Navigating to https://meet.google.com/nmz-ifmm-qce
+Bot error: Message: 
+Stacktrace:
+#0 0x5575b8db845a <unknown>
+#1 0x5575b885d760 <unknown>
+#2 0x5575b88af127 <unknown>
+#3 0x5575b88af321 <unknown>
+#4 0x5575b88fde94 <unknown>
+#5 0x5575b88d4e7d <unknown>
+#6 0x5575b88fb30b <unknown>
+#7 0x5575b88d4c23 <unknown>
+#8 0x5575b88a14a5 <unknown>
+#9 0x5575b88a2111 <unknown>
+#10 0x5575b8d7cf1b <unknown>
+#11 0x5575b8d80e19 <unknown>
+#12 0x5575b8d63ac9 <unknown>
+#13 0x5575b8d819c8 <unknown>
+#14 0x5575b8d4834f <unknown>
+#15 0x5575b8da5a28 <unknown>
+#16 0x5575b8da5c06 <unknown>
+#17 0x5575b8db7336 <unknown>
+#18 0x7f14edc507eb <unknown>
+#19 0x7f14edcd418c <unknown>
+
+❌ Failed to join: Message: 
+Stacktrace:
+#0 0x5575b8db845a <unknown>
+#1 0x5575b885d760 <unknown>
+#2 0x5575b88af127 <unknown>
+#3 0x5575b88af321 <unknown>
+#4 0x5575b88fde94 <unknown>
+#5 0x5575b88d4e7d <unknown>
+#6 0x5575b88fb30b <unknown>
+#7 0x5575b88d4c23 <unknown>
+#8 0x5575b88a14a5 <unknown>
+#9 0x5575b88a2111 <unknown>
+#10 0x5575b8d7cf1b <unknown>
+#11 0x5575b8d80e19 <unknown>
+#12 0x5575b8d63ac9 <unknown>
+#13 0x5575b8d819c8 <unknown>
+#14 0x5575b8d4834f <unknown>
+#15 0x5575b8da5a28 <unknown>
+#16 0x5575b8da5c06 <unknown>
+#17 0x5575b8db7336 <unknown>
+#18 0x7f14edc507eb <unknown>
+#19 0x7f14edcd418c <unknown>
+System check identified some issues:
+
+WARNINGS:
+?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}
+?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+⌚ Checking meetings between 14:03:00 and 14:09:00
+🤖 Joining meeting: ahad as bot 'mmaaa'
+Navigating to https://meet.google.com/nmz-ifmm-qce
+Bot error: Message: 
+Stacktrace:
+#0 0x5609d51a945a <unknown>
+#1 0x5609d4c4e760 <unknown>
+#2 0x5609d4ca0127 <unknown>
+#3 0x5609d4ca0321 <unknown>
+#4 0x5609d4ceee94 <unknown>
+#5 0x5609d4cc5e7d <unknown>
+#6 0x5609d4cec30b <unknown>
+#7 0x5609d4cc5c23 <unknown>
+#8 0x5609d4c924a5 <unknown>
+#9 0x5609d4c93111 <unknown>
+#10 0x5609d516df1b <unknown>
+#11 0x5609d5171e19 <unknown>
+#12 0x5609d5154ac9 <unknown>
+#13 0x5609d51729c8 <unknown>
+#14 0x5609d513934f <unknown>
+#15 0x5609d5196a28 <unknown>
+#16 0x5609d5196c06 <unknown>
+#17 0x5609d51a8336 <unknown>
+#18 0x7f000f5567eb <unknown>
+#19 0x7f000f5da18c <unknown>
+
+❌ Failed to join: Message: 
+Stacktrace:
+#0 0x5609d51a945a <unknown>
+#1 0x5609d4c4e760 <unknown>
+#2 0x5609d4ca0127 <unknown>
+#3 0x5609d4ca0321 <unknown>
+#4 0x5609d4ceee94 <unknown>
+#5 0x5609d4cc5e7d <unknown>
+#6 0x5609d4cec30b <unknown>
+#7 0x5609d4cc5c23 <unknown>
+#8 0x5609d4c924a5 <unknown>
+#9 0x5609d4c93111 <unknown>
+#10 0x5609d516df1b <unknown>
+#11 0x5609d5171e19 <unknown>
+#12 0x5609d5154ac9 <unknown>
+#13 0x5609d51729c8 <unknown>
+#14 0x5609d513934f <unknown>
+#15 0x5609d5196a28 <unknown>
+#16 0x5609d5196c06 <unknown>
+#17 0x5609d51a8336 <unknown>
+#18 0x7f000f5567eb <unknown>
+#19 0x7f000f5da18c <unknown>
+🤖 Joining meeting: sakk as bot 'micro'
+Navigating to https://meet.google.com/nmz-ifmm-qce
+Bot error: Message: 
+Stacktrace:
+#0 0x55905b08545a <unknown>
+#1 0x55905ab2a760 <unknown>
+#2 0x55905ab7c127 <unknown>
+#3 0x55905ab7c321 <unknown>
+#4 0x55905abcae94 <unknown>
+#5 0x55905aba1e7d <unknown>
+#6 0x55905abc830b <unknown>
+#7 0x55905aba1c23 <unknown>
+#8 0x55905ab6e4a5 <unknown>
+#9 0x55905ab6f111 <unknown>
+#10 0x55905b049f1b <unknown>
+#11 0x55905b04de19 <unknown>
+#12 0x55905b030ac9 <unknown>
+#13 0x55905b04e9c8 <unknown>
+#14 0x55905b01534f <unknown>
+#15 0x55905b072a28 <unknown>
+#16 0x55905b072c06 <unknown>
+#17 0x55905b084336 <unknown>
+#18 0x7f525d34c7eb <unknown>
+#19 0x7f525d3d018c <unknown>
+
+❌ Failed to join: Message: 
+Stacktrace:
+#0 0x55905b08545a <unknown>
+#1 0x55905ab2a760 <unknown>
+#2 0x55905ab7c127 <unknown>
+#3 0x55905ab7c321 <unknown>
+#4 0x55905abcae94 <unknown>
+#5 0x55905aba1e7d <unknown>
+#6 0x55905abc830b <unknown>
+#7 0x55905aba1c23 <unknown>
+#8 0x55905ab6e4a5 <unknown>
+#9 0x55905ab6f111 <unknown>
+#10 0x55905b049f1b <unknown>
+#11 0x55905b04de19 <unknown>
+#12 0x55905b030ac9 <unknown>
+#13 0x55905b04e9c8 <unknown>
+#14 0x55905b01534f <unknown>
+#15 0x55905b072a28 <unknown>
+#16 0x55905b072c06 <unknown>
+#17 0x55905b084336 <unknown>
+#18 0x7f525d34c7eb <unknown>
+#19 0x7f525d3d018c <unknown>
+System check identified some issues:
+
+WARNINGS:
+?: settings.ACCOUNT_AUTHENTICATION_METHOD is deprecated, use: settings.ACCOUNT_LOGIN_METHODS = {'email'}
+?: settings.ACCOUNT_EMAIL_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+?: settings.ACCOUNT_USERNAME_REQUIRED is deprecated, use: settings.ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']

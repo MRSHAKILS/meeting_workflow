@@ -15,6 +15,7 @@ class Meeting(models.Model):
     bot_name = models.CharField("Bot Name", max_length=100)
     meeting_link = models.URLField("Link", blank=True)
     join_time = models.TimeField("Join Time", null=True, blank=True)
+    joined = models.BooleanField("Bot Joined?", default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

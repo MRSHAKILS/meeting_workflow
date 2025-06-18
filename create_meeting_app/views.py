@@ -29,11 +29,12 @@ def join_meeting(request):
             meeting = get_object_or_404(Meeting, pk=form.cleaned_data['meeting_id'], user=request.user)
             meeting.meeting_link = form.cleaned_data['meeting_link']
             meeting.join_time = form.cleaned_data['join_time']
+            meeting.joined = False  # reset so scheduler will pick it up
             meeting.save()
-            messages.success(request, 'Meeting details saved! Redirecting to meeting page.')
+            messages.success(request, 'Meeting details saved! Bot will join on time.')
             return redirect('meeting_page', meeting_id=meeting.pk)
         else:
-            messages.error(request, 'Error saving meeting details. Please check the form.')
+            messages.error(request, 'Error saving meeting details.')
     return redirect('dashboard')
 
 def meeting_page(request, meeting_id):
