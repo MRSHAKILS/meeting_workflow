@@ -17,7 +17,8 @@ class Meeting(models.Model):
     join_time = models.TimeField("Join Time", null=True, blank=True)
     joined = models.BooleanField("Bot Joined?", default=False)
     created_at = models.DateTimeField(auto_now_add=True)
-
+    is_active = models.BooleanField(default=True)
+    
     def __str__(self):
         return f"{self.name} ({self.bot_name})"
 

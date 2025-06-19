@@ -1,83 +1,83 @@
+# create_meeting_app/bot_scripts/google_meet_bot.py
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
-from selenium.webdriver.chrome.options import Options
-
-def join_meeting(meeting_link, bot_name):
-    # Set up Chrome options
+def join_meeting(meeting_link: str, bot_name: str):
+    # ─── Chrome options ───────────────────────────────────────────────────────────
     options = Options()
-    options.add_argument("--use-fake-ui-for-media-stream")  # Auto-allow mic/camera
+    options.add_argument("--use-fake-ui-for-media-stream")     # Auto-allow mic/camera
     options.add_argument("--disable-infobars")
     options.add_argument("--disable-popup-blocking")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument("--start-maximized")
+    options.add_argument("--start-maximized")                  # You’ll actually see it
 
-    driver = webdriver.Chrome(options=options)
+    # ─── Set up Service with webdriver-manager ───────────────────────────────────
+    service = Service(ChromeDriverManager().install())
+    driver  = webdriver.Chrome(service=service, options=options)
+
     try:
-        # Navigate to the meeting link
+        # ─── Navigate to Meeting ─────────────────────────────────────────────────
         driver.get(meeting_link)
-        print(f"Navigating to {meeting_link}")
-        time.sleep(5)  # Wait for initial page load
+        print(f"🔗 Navigating to {meeting_link}")
+        time.sleep(5)
 
-        # Wait for the name input field and enter the bot's name
-        wait = WebDriverWait(driver, 10)
-        name_field = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Your name']")))
+        # ─── Enter bot’s display name ────────────────────────────────────────────
+        wait       = WebDriverWait(driver, 15)
+        name_field = wait.until(EC.presence_of_element_located(
+            (By.XPATH, "//input[@placeholder='Your name']")))
         name_field.clear()
         name_field.send_keys(bot_name)
-        print(f"Entered name: {bot_name}")
+        print(f"✍️ Entered name: {bot_name}")
 
-        # Optionally disable microphone and camera
+        # ─── Mute mic & camera ────────────────────────────────────────────────────
         try:
-            mic_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@aria-label='Turn off microphone']")))
-            mic_button.click()
-            cam_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@aria-label='Turn off camera']")))
-            cam_button.click()
-            print("Mic and camera disabled")
+            mic_btn = wait.until(EC.element_to_be_clickable(
+                (By.XPATH, "//button[@aria-label='Turn off microphone']")))
+            cam_btn = wait.until(EC.element_to_be_clickable(
+                (By.XPATH, "//button[@aria-label='Turn off camera']")))
+            mic_btn.click(); cam_btn.click()
+            print("🤫 Mic & camera disabled")
         except Exception as e:
-            print(f"Microphone/camera handling skipped: {e}")
+            print(f"⚠️ Mic/camera skip: {e}")
 
-        # Dismiss any overlays or pop-ups
+        # ─── Dismiss overlays ─────────────────────────────────────────────────────
+        for btn in driver.find_elements(By.XPATH, "//button[contains(text(), 'Dismiss')]"):
+            btn.click()
+            print("🚫 Dismissed a pop‑up")
+
+        # ─── Click Join ───────────────────────────────────────────────────────────
+        long_wait = WebDriverWait(driver, 30)
         try:
-            dismiss_buttons = driver.find_elements(By.XPATH, "//button[contains(text(), 'Dismiss')]")
-            for button in dismiss_buttons:
-                button.click()
-                print("Dismissed overlay/pop-up")
+            join_btn = long_wait.until(EC.element_to_be_clickable(
+                (By.XPATH, "//span[contains(text(), 'Join now')]")))
         except:
-            print("No overlays found to dismiss")
+            join_btn = long_wait.until(EC.element_to_be_clickable(
+                (By.XPATH, "//span[contains(text(), 'Ask to join')]")))
 
-        # Wait for and click "Join now" or "Ask to join"
-        wait = WebDriverWait(driver, 30)  # Increased wait time
-        try:
-            join_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'Join now')]")))
-        except:
-            join_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'Ask to join')]")))
+        driver.execute_script("arguments[0].scrollIntoView(true);", join_btn)
+        time.sleep(1)
+        driver.execute_script("arguments[0].click();", join_btn)
+        print("🚀 Clicked Join/Ask to join")
 
-        # Ensure the button is visible and clickable
-        driver.execute_script("arguments[0].scrollIntoView(true);", join_button)
-        time.sleep(1)  # Wait for scroll to complete
-        driver.execute_script("arguments[0].click();", join_button)  # Click via JavaScript
-        print("Clicked Join/Ask to join button")
-
-        # Stay in the meeting for 1 hour
-        time.sleep(3600)
-    except Exception as e:
-        print(f"Bot error: {str(e)}")
+        # ─── Stay in meeting ───────────────────────────────────────────────────────
+        time.sleep(3600)  # 1 hour
+    except Exception as err:
+        print(f"❌ Bot error: {err}")
         raise
     finally:
         driver.quit()
 
-# Example usage
+
+# ─── Quick test if run directly ────────────────────────────────────────────────
 if __name__ == "__main__":
-    join_meeting("https://meet.google.com/szf-copq-qdf", "ahh")
+    test_url = "https://meet.google.com/uou-rsvo-epg"
+    join_meeting(test_url, "TestBot")
