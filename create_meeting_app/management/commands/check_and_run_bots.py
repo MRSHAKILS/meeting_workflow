@@ -25,7 +25,8 @@ class Command(BaseCommand):
         for meeting in meetings_to_join:
             self.stdout.write(f"🤖 Joining meeting: {meeting.name} as bot '{meeting.bot_name}'")
             try:
-                join_meeting(meeting.meeting_link, meeting.bot_name)
+                # Pass the Meeting instance to the function
+                join_meeting(meeting.meeting_link, meeting.bot_name, meeting)
                 meeting.joined = True
                 meeting.save()
                 self.stdout.write("✅ Marked as joined.")
