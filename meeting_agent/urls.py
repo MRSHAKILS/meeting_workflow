@@ -17,6 +17,7 @@ urlpatterns = [
     # Meetings dashboard (requires login)
     path('dashboard/', include('create_meeting_app.urls')),
     # Public landing page at root
-    path('', landing_page, name='landing_page'),
+    path('', include('landing_page.urls')),  
+   
 ]
 
