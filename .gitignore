@@ -2,3 +2,4 @@ meeting_agent_venv/
 __pycache__/
 *.pyc
 .env
+secrets/json/*.json
