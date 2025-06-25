@@ -28,3 +28,10 @@ class Screenshot(models.Model):
     meeting = models.ForeignKey(Meeting, on_delete=models.CASCADE, related_name="screenshots")
     image_path = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
+
+
+class Transcript(models.Model):
+    meeting = models.ForeignKey(Meeting, on_delete=models.CASCADE, related_name="transcripts")
+    text    = models.TextField()
+    summary = models.TextField(blank=True, null=True)  # ← new
+    created = models.DateTimeField(auto_now_add=True)

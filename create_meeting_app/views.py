@@ -6,6 +6,14 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.management import call_command
 from .models import Meeting
 from .forms import CreateMeetingForm, JoinMeetingForm
+import requests
+from django.conf import settings
+from django.http   import JsonResponse
+from django.shortcuts import get_object_or_404
+from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
+
+from .models import Transcript
 
 
 def dashboard(request):
@@ -76,3 +84,36 @@ def transcribe_meeting_view(request, meeting_id):
         call_command('transcribe_meeting', str(meeting_id))
         return redirect('meeting_page', meeting_id=meeting_id)
     return HttpResponse("Invalid request", status=400)
+
+@login_required
+@require_POST
+def summarize_transcript(request, transcript_id):
+    t = get_object_or_404(Transcript, pk=transcript_id, meeting__user=request.user)
+
+    prompt = f"Summarize this meeting transcription concisely:\n\n{t.text}"
+
+    try:
+        resp = requests.post(
+            "https://api.groq.com/openai/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {settings.GROQ_API_KEY}",
+                "Content-Type":  "application/json",
+            },
+            json={
+                "model":      "llama3-8b-8192",  # or "mixtral-8x7b-32768" if available
+                "messages":   [{"role": "user", "content": prompt}],
+                "temperature":0.5,
+                "max_tokens": 256,
+            },
+            timeout=30,
+        )
+
+        resp.raise_for_status()
+        summary = resp.json()["choices"][0]["message"]["content"].strip()
+        t.summary = summary
+        t.save()
+        return JsonResponse({"success": True, "summary": summary})
+
+    except requests.exceptions.HTTPError as e:
+        print("Groq API error:", resp.status_code, resp.text)
+        return JsonResponse({"success": False, "error": resp.text}, status=500)

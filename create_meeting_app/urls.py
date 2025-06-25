@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import dashboard, create_meeting, join_meeting, meeting_page, delete_meeting, transcribe_meeting_view
+from .views import dashboard, create_meeting, join_meeting, meeting_page, delete_meeting, transcribe_meeting_view,summarize_transcript
 
 urlpatterns = [
     path('', dashboard, name='dashboard'),
@@ -8,4 +8,6 @@ urlpatterns = [
     path('meeting/<int:meeting_id>/', meeting_page, name='meeting_page'),
     path('delete_meeting/<int:meeting_id>/', delete_meeting, name='delete_meeting'),
     path('meeting/<int:meeting_id>/transcribe/', transcribe_meeting_view, name='transcribe_meeting'),
+    path('summarize/<int:transcript_id>/', summarize_transcript, name='summarize_transcript'),
+
 ]
