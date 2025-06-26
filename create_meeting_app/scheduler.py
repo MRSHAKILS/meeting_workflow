@@ -24,7 +24,7 @@ def check_and_run_meetings():
         meeting.save()
 
         try:
-            google_meet_bot.join_meeting(meeting.meeting_link, meeting.bot_name)
+            google_meet_bot.join_meeting(meeting.meeting_link, meeting.bot_name, meeting)
             print("✅ Successfully joined.")
         except Exception as e:
             print(f"❌ Failed to join meeting: {e}")
@@ -33,21 +33,20 @@ def check_and_run_meetings():
             # meeting.save()
 
 def start():
-    # Use BlockingScheduler so this call never returns (keeps process alive)
-    scheduler = BlockingScheduler()
-    scheduler.add_jobstore(DjangoJobStore(), "default")
+    # Use in-memory jobstore to prevent SQLite locking issues
+    scheduler = BlockingScheduler(jobstores={})
 
     scheduler.add_job(
         check_and_run_meetings,
         trigger='interval',
         minutes=1,
         name='check_and_run_meetings_job',
-        jobstore='default',
         replace_existing=True,
-        max_instances=1,   # ensure only one job instance runs at a time
-        coalesce=True,      # if runs are missed, only run once on next tick
+        max_instances=3,
+        coalesce=True,
     )
 
     print("🔁 BlockingScheduler starting...")
-    scheduler.start()  # blocks indefinitely, running jobs on schedule
+    scheduler.start()
     print("🛑 BlockingScheduler stopped.")
+

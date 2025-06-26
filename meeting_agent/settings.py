@@ -9,6 +9,9 @@ from dotenv import load_dotenv
 load_dotenv()  
 
 from pathlib import Path
+from decouple import config
+GROQ_API_KEY = config('GROQ_API_KEY')
+
 
 # BASE_DIR setup
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -144,3 +147,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # EMAIL BACKEND (console for dev)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
