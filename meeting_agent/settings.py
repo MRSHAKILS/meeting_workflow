@@ -10,7 +10,7 @@ load_dotenv()
 
 from pathlib import Path
 from decouple import config
-GROQ_API_KEY = config('GROQ_API_KEY')
+GROQ_API_KEY = config('GROQ_API_KEY', default='dummy_value')  # Use decouple to manage environment variables
 
 
 # BASE_DIR setup
